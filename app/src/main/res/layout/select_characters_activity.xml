@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Time:"/>
+
+        <EditText
+            android:id="@+id/select_characters_time"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="3"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:text="Name:"/>
+
+        <EditText
+            android:id="@+id/select_characters_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:maxLength="16"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/select_characters_doppelganger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Doppelganger"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_werewolf_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:enabled="false"
+        android:text="Werewolf"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_werewolf_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Werewolf"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_minion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Minion"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_seer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Seer"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_robber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Robber"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_witch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Witch"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_troublemaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="Troublemaker"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_insomniac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Insomniac"/>
+
+    <CheckBox
+        android:id="@+id/select_characters_tanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanner"/>
+
+    <Button
+        android:id="@+id/select_characters_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"/>
+
+</LinearLayout>
