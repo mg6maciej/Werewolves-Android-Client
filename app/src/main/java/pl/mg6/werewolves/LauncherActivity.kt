@@ -15,6 +15,7 @@ class LauncherActivity : AppCompatActivity() {
         api.games(getMyId())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::showMyGames) { enableButtons() }
+        launcher_version.text = "Version: ${packageManager.getPackageInfo(packageName, 0).versionName}"
     }
 
     private fun showMyGames(games: List<GameInfoPlayersOnly>) {
