@@ -30,6 +30,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun onSuccess(info: GameInfo) {
+        val characters = info.characters.sorted()
+        game_characters.text = "Roles: ${characters.dropLast(1).joinToString()} and ${characters.last()}"
         game_names_container.removeAllViews()
         info.names.forEachIndexed { index, it ->
             game_names_container.addView(TextView(this).apply {
