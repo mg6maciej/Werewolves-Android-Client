@@ -12,10 +12,14 @@ class LauncherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.launcher_activity)
+        launcher_version.text = "Version: ${packageManager.getPackageInfo(packageName, 0).versionName}"
+    }
+
+    override fun onResume() {
+        super.onResume()
         api.games(getMyId())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(this::showMyGames) { enableButtons() }
-        launcher_version.text = "Version: ${packageManager.getPackageInfo(packageName, 0).versionName}"
     }
 
     private fun showMyGames(games: List<GameInfoPlayersOnly>) {
