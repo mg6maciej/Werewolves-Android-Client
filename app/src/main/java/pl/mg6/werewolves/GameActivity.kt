@@ -68,7 +68,7 @@ class GameActivity : AppCompatActivity() {
                     is LoneWerewolfInfo -> "You saw ${it.character} in the middle. Try pretending you are not a werewolf."
                     is MinionInfo -> when (it.werewolves.size) {
                         0 -> "There are no werewolves. Make other think someone is a werewolf to win."
-                        1 -> "Player \"${info.names[it.werewolves[0]]}\" is a werewolf. Protect him."
+                        1 -> "Player \"${info.names[it.werewolves[0]]}\" is a werewolf. Protect him or her."
                         else -> "Players ${it.werewolves.dropLast(1).joinToString() { "\"${info.names[it]}\"" }} and ${info.names[it.werewolves.last()]} are werewolves. Protect them all."
                     }
                     is SeerCenterInfo -> "You saw ${it.leftCharacter} and ${it.rightCharacter}."
